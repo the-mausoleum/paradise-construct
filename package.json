@@ -1,0 +1,19 @@
+{
+  "name": "paradise-construct",
+  "version": "0.0.0",
+  "description": "Tools for quickly building in Paradise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxdeviant/paradise-construct.git"
+  },
+  "author": "Marshall Bowers <elliott.codes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxdeviant/paradise-construct/issues"
+  },
+  "homepage": "https://github.com/maxdeviant/paradise-construct"
+}
