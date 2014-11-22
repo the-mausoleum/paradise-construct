@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/maxdeviant/paradise-construct/issues"
   },
-  "homepage": "https://github.com/maxdeviant/paradise-construct"
+  "homepage": "https://github.com/maxdeviant/paradise-construct",
+  "dependencies": {
+    "multiline": "^1.0.1"
+  }
 }
