@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/maxdeviant/paradise-construct",
   "dependencies": {
-    "multiline": "^1.0.1"
+    "codemirror": "^4.7.0",
+    "multiline": "^1.0.1",
+    "paradise-script": "0.0.4"
   }
 }
