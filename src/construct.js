@@ -122,7 +122,7 @@ var Paradise = function (vesselId) {
     }
 };
 
-VESSEL_ID = '';
+var VESSEL_ID = '';
 
 var paradise = new Paradise(VESSEL_ID);
 
