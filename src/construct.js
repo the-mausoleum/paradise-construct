@@ -19,6 +19,9 @@ var Paradise = function (vesselId) {
     this.enter = enter;
     this.leave = leave;
 
+                if (typeof callback === 'function') {
+                    callback(data);
+                }
     function create(vessel, callback) {
         var url = actionUrl + 'create-' + slugify(vessel.name) + '&vessel=' + vesselId;
 
@@ -81,7 +84,9 @@ var Paradise = function (vesselId) {
             res.on('data', function (chunk) {
                 var data = JSON.parse(chunk);
 
-                callback(data);
+                if (typeof callback === 'function') {
+                    callback(data);
+                }
             });
         });
     }
@@ -95,7 +100,9 @@ var Paradise = function (vesselId) {
             res.on('data', function (chunk) {
                 var data = JSON.parse(chunk);
 
-                callback(data);
+                if (typeof callback === 'function') {
+                    callback(data);
+                }
             });
         });
     }
