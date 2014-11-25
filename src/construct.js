@@ -14,14 +14,28 @@ var Paradise = function (vesselId) {
         'paint'
     ];
 
+    this.say = say;
     this.create = create;
     this.update = update;
     this.enter = enter;
     this.leave = leave;
 
+    function say(message, callback) {
+        var url = actionUrl + 'say-' + message + '&vessel=' + vesselId;
+
+        http.get(url, function (res) {
+            res.setEncoding('utf8');
+
+            res.on('data', function (chunk) {
+                var data = JSON.parse(chunk);
+
                 if (typeof callback === 'function') {
                     callback(data);
                 }
+            });
+        });
+    }
+
     function create(vessel, callback) {
         var url = actionUrl + 'create-' + slugify(vessel.name) + '&vessel=' + vesselId;
 
@@ -72,7 +86,7 @@ var Paradise = function (vesselId) {
     }
 
     function update(vessel, callback) {
-        
+
     }
 
     function enter(vessel, callback) {
@@ -131,7 +145,6 @@ paradise.create({
     note: 'A grand hotel.',
     program: 'enter hotel',
     usage: 'check into',
+    paint: '90 90 90',
     feedback: 'You have booked at room at the hotel.'
-}, function (data) {
-    console.log(data)
 });
